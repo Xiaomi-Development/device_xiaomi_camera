@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "MiuiCameraOverlay",
+    name: "MiuiCameraOverlay_thyme",
     product_specific: true,
 }
 

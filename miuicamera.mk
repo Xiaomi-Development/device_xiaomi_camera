@@ -13,7 +13,7 @@ PRODUCT_COPY_FILES += \
 
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
-     $(CAMERA_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
+     $(CAMERA_PATH)/configs/camera/$(TARGET_DEVICE)/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
 
 # Camera Extensions
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -22,11 +22,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Camera Extensions permissions
 PRODUCT_COPY_FILES += \
     $(CAMERA_PATH)/configs/permissions/extensions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/camerax-vendor-extensions.xml
-
-# Device-Features
-PRODUCT_COPY_FILES += \
-     $(CAMERA_PATH)/configs/device_features/alioth.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/alioth.xml \
-     $(CAMERA_PATH)/configs/device_features/aliothin.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/aliothin.xml
 
 # Symlinks
 PRODUCT_PACKAGES += \
@@ -69,9 +64,11 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     $(CAMERA_PATH)/sepolicy/misys/public
 
+ifneq ($(TARGET_DEVICE),veux)
 # Qualcomm Gralloc
 PRODUCT_PACKAGES += \
      gralloc.qcom
+endif
 
 # MiSys HIDL deps
 PRODUCT_PACKAGES += \
@@ -83,9 +80,13 @@ PRODUCT_PACKAGES += \
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    MiuiCameraOverlay \
+    MiuiCameraOverlay_$(TARGET_DEVICE) \
     MiuiCameraOverlayLos \
     MiuiCameraOverlayAosp
+
+# Device Specific Namespace
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi/$(TARGET_DEVICE)
 
 # System Properties
 PRODUCT_SYSTEM_PROPERTIES += \
