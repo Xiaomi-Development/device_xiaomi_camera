@@ -1,11 +1,19 @@
 # proprietary_device_xiaomi_camera
 
-Prebuilt modded MIUI/Leica Camera 5.0 for Poco F3/Redmi K40/Mi 11x (alioth), to include in custom ROM builds.
+Prebuilt modded MIUI/Leica Camera 5.0, to include in custom ROM builds.
+
+### Tested on the following devices
+- Xiaomi Mi 10
+- Xiaomi Mi 10 Pro
+- Xiaomi Mi 10S
+- Xiaomi Mi 10 Ultra
+- Xiaomi Mi 10 Lite
+- Xiaomi POCO X4 Pro 5G / Redmi Note 11 Pro 5G / Redmi Note 11 Pro+ 5G / Redmi Note 11E Pro (Veux)
 
 ### How to use?
 
 1. Clone this repo to `device/xiaomi/camera`
-2. Clone https://gitlab.com/johnmart19/vendor_xiaomi_camera to 'vendor/xiaomi/camera'
+2. Clone https://gitlab.com/xiaomi-development/vendor_xiaomi_camera to 'vendor/xiaomi/camera'
 3. Inherit it from `device.mk` in device tree:
 ```
 # Camera
