@@ -9,6 +9,7 @@ Prebuilt modded MIUI/Leica Camera 5.0, to include in custom ROM builds.
 - Xiaomi Mi 10 Ultra
 - Xiaomi Mi 10 Lite
 - Xiaomi POCO X4 Pro 5G / Redmi Note 11 Pro 5G / Redmi Note 11 Pro+ 5G / Redmi Note 11E Pro (Veux)
+- Xiaomi Poco M2 Pro / Redmi Note 9S / Note 9 Pro / Note 9 Pro Max / Note 10 Lite (Miatoll)
 
 ### How to use?
 
