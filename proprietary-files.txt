@@ -7,22 +7,6 @@ system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=GrapheneCamera,Camera,Camera
 system/etc/public.libraries-xiaomi.txt
 system/lib64/libcamera_algoup_jni.xiaomi.so
 system/lib64/libcamera_mianode_jni.xiaomi.so
-system/lib64/libmicampostproc_client.so
-system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
-
-# Device OpenCL Prebuilts
-system_ext/lib/libOpenCL_system.so:system/lib/libOpenCL_system.so
-system_ext/lib64/libOpenCL_system.so:system/lib64/libOpenCL_system.so
-
-# Device Camera Deps
-vendor/bin/f2player
-vendor/lib64/libarcsat.so
-vendor/lib64/libsupermoon.so
-
-# Device Camera Dependencies & Overwrites
-system/lib64/libmqsas.so
-system_ext/lib64/libcameraimpl.so:system/lib64/libcameraimpl.so
-system_ext/lib64/libopencl-camera.so:system/lib64/libopencl-camera.so
 
 # MiSys
 system/lib64/libmisys_jni.xiaomi.so
@@ -80,7 +64,6 @@ vendor/etc/camera/125_Latin.png
 vendor/etc/camera/126_Fantasy2.png
 vendor/etc/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png
-vendor/etc/camera/sceneDetection.xml
 
 # Camera Extensions
 system_ext/framework/camerax-vendor-extensions.jar:system/framework/camerax-vendor-extensions.jar;BOOT_JAR

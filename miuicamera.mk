@@ -13,7 +13,7 @@ PRODUCT_COPY_FILES += \
 
 # CameraX Config Overwrite
 PRODUCT_COPY_FILES += \
-     $(CAMERA_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
+     $(CAMERA_PATH)/configs/camera/$(LINEAGE_BUILD)/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
 
 # Camera Extensions
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -25,8 +25,11 @@ PRODUCT_COPY_FILES += \
 
 # Device-Features
 PRODUCT_COPY_FILES += \
-     $(CAMERA_PATH)/configs/device_features/alioth.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/alioth.xml \
-     $(CAMERA_PATH)/configs/device_features/aliothin.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/aliothin.xml
+     $(CAMERA_PATH)/configs/device_features/$(LINEAGE_BUILD).xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/alioth.xml
+
+# Device Specific Namespace
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi/$(LINEAGE_BUILD)
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -87,7 +90,7 @@ PRODUCT_PACKAGES += \
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    MiuiCameraOverlay \
+    MiuiCameraOverlay_$(LINEAGE_BUILD) \
     MiuiCameraOverlayLos \
     MiuiCameraOverlayAosp
 
