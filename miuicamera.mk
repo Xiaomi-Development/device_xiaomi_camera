@@ -76,9 +76,11 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     $(CAMERA_PATH)/sepolicy/misys/public
 
+ifneq ($(LINEAGE_BUILD),veux)
 # Qualcomm Gralloc
 PRODUCT_PACKAGES += \
      gralloc.qcom
+endif
 
 # MiSys HIDL deps
 PRODUCT_PACKAGES += \
